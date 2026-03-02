@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MD. Mijanur Rahman - President, Bangladesh Nurses Association, Mymensingh District Branch" />
+  <title>MD. Mijanur Rahman | BNA Mymensingh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0a1628; --navy2: #122040; --teal: #0d6e6e;
+      --gold: #c9a84c; --gold-light: #e8c97e;
+      --cream: #faf7f2; --cream2: #f0ebe1;
+      --text: #1e2a3a; --text-muted: #5a6b7e; --white: #ffffff;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(10,22,40,0.10);
+      --shadow-lg: 0 8px 48px rgba(10,22,40,0.16);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+    .bn { font-family: 'Hind Siliguri', sans-serif; }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,22,40,0.97); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding: 0 24px; display: flex; align-items: center;
+      justify-content: space-between; height: 64px;
+    }
+    .nav-brand { cursor: pointer; }
+    .nav-brand-name { display: block; color: var(--gold); font-size: 14px; font-weight: 700; font-family: 'Playfair Display', serif; line-height: 1.2; }
+    .nav-brand-sub { display: block; color: rgba(255,255,255,0.5); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 4px; align-items: center; }
+    .nav-link {
+      color: rgba(255,255,255,0.75); background: none; border: none; cursor: pointer;
+      padding: 8px 13px; border-radius: 8px; font-family: 'Source Serif 4', serif;
+      font-size: 13px; transition: all 0.2s; display: flex; align-items: center; gap: 5px;
+    }
+    .nav-link:hover, .nav-link.active { background: rgba(201,168,76,0.15); color: var(--gold-light); }
+    .nav-actions { display: flex; gap: 8px; align-items: center; }
+    .lang-btn {
+      background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold); border-radius: 8px; cursor: pointer;
+      padding: 6px 14px; font-size: 12px; font-weight: 700; transition: all 0.2s;
+    }
+    .lang-btn:hover { background: rgba(201,168,76,0.25); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; color: var(--gold); }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; position: fixed; top: 64px; left: 0; right: 0;
+        background: rgba(10,22,40,0.98); flex-direction: column;
+        padding: 16px; border-bottom: 1px solid rgba(201,168,76,0.2); gap: 4px;
+      }
+      .nav-links.open { display: flex; }
+      .hamburger { display: block; }
+      .nav-link { width: 100%; justify-content: flex-start; }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy) 0%, #0f2545 40%, #0a3b3b 100%);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; padding: 80px 24px 48px;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 40%, rgba(13,110,110,0.25) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.12) 0%, transparent 50%);
+    }
+    .hero-pattern {
+      position: absolute; inset: 0; opacity: 0.04;
+      background-image: repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%);
+      background-size: 24px 24px;
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; max-width: 700px; animation: fadeUp 0.8s ease;
+    }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+    .hero-badge {
+      background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 50px; padding: 6px 20px; color: var(--gold-light);
+      font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px;
+    }
+    .hero-avatar {
+      width: 140px; height: 140px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--navy2) 100%);
+      border: 4px solid var(--gold); margin-bottom: 28px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 52px; font-family: 'Playfair Display', serif;
+      color: var(--gold); font-weight: 700;
+      box-shadow: 0 0 40px rgba(201,168,76,0.25), 0 8px 40px rgba(0,0,0,0.4);
+    }
+    .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(26px,5vw,46px); font-weight: 900; color: var(--white); margin-bottom: 10px; line-height: 1.15; }
+    .hero-title { font-size: clamp(14px,2vw,18px); color: var(--gold); margin-bottom: 4px; }
+    .hero-org { font-size: clamp(13px,1.8vw,16px); color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+    .hero-branch { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 24px; }
+    .hero-divider { width: 80px; height: 2px; margin: 0 auto 24px; background: linear-gradient(90deg,transparent,var(--gold),transparent); }
+    .hero-tagline { font-size: clamp(13px,1.8vw,16px); color: rgba(255,255,255,0.65); max-width: 500px; font-style: italic; margin-bottom: 40px; }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .btn-gold { background: linear-gradient(135deg,var(--gold),var(--gold-light)); color: var(--navy); border: none; border-radius: 8px; padding: 13px 30px; font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Source Serif 4', serif; }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.35); }
+    .btn-outline-white { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.35); border-radius: 8px; padding: 13px 30px; font-size: 14px; cursor: pointer; transition: all 0.2s; font-family: 'Source Serif 4', serif; }
+    .btn-outline-white:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── SECTIONS ── */
+    .page { display: none; padding-top: 64px; }
+    .page.active { display: block; }
+    .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+    .section-heading { font-family: 'Playfair Display', serif; font-size: clamp(26px,4vw,40px); font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .section-line { width: 60px; height: 3px; background: var(--gold); border-radius: 2px; margin-bottom: 40px; }
+    .tag { display: inline-block; background: rgba(13,110,110,0.1); color: var(--teal); border-radius: 6px; padding: 4px 12px; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 12px; }
+
+    /* ── ABOUT ── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
+    .about-bio { font-size: 15.5px; color: var(--text); line-height: 1.85; white-space: pre-line; }
+    .about-role { margin-top: 16px; font-size: 14px; font-style: italic; color: var(--teal); font-weight: 600; }
+    .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .stat-card { background: white; border-radius: var(--radius); padding: 24px 16px; text-align: center; box-shadow: var(--shadow); border-top: 3px solid var(--gold); }
+    .stat-value { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--navy); font-weight: 900; line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
+    .about-box { margin-top: 24px; padding: 24px; background: linear-gradient(135deg,var(--navy),var(--navy2)); border-radius: var(--radius); color: white; }
+    .about-box-title { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--gold); margin-bottom: 10px; }
+    .about-box p { font-size: 13.5px; opacity: 0.8; line-height: 1.75; }
+
+    /* ── POSTS ── */
+    .posts-bg { background: var(--cream2); padding: 80px 0; }
+    .posts-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 24px; }
+    .post-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; transition: all 0.25s; cursor: pointer; border: 1px solid rgba(0,0,0,0.06); }
+    .post-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .post-card-accent { height: 5px; background: linear-gradient(90deg,var(--navy),var(--teal)); }
+    .post-card-body { padding: 24px; }
+    .post-date { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
+    .post-title { font-family: 'Playfair Display', serif; font-size: 19px; color: var(--navy); margin-bottom: 12px; line-height: 1.35; font-weight: 700; }
+    .post-excerpt { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+    .post-readmore { display: inline-block; margin-top: 16px; font-size: 13px; color: var(--teal); font-weight: 600; cursor: pointer; }
+    .empty-state { text-align: center; padding: 64px; color: var(--text-muted); font-size: 16px; }
+
+    /* ── MODAL ── */
+    .modal-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(10,22,40,0.75); backdrop-filter: blur(4px); align-items: center; justify-content: center; padding: 24px; }
+    .modal-overlay.open { display: flex; }
+    .modal-box { background: white; border-radius: 16px; max-width: 680px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 40px; box-shadow: 0 24px 80px rgba(0,0,0,0.3); }
+    .modal-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 8px; }
+    .modal-title { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--navy); line-height: 1.3; flex: 1; }
+    .modal-close { background: var(--cream2); border: none; border-radius: 8px; padding: 8px 16px; cursor: pointer; color: var(--navy); font-size: 13px; font-weight: 600; white-space: nowrap; }
+    .modal-date { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+    .modal-body { font-size: 15.5px; color: var(--text); line-height: 1.9; }
+
+    /* ── CONTACT ── */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-info { display: flex; flex-direction: column; gap: 16px; }
+    .contact-item { display: flex; gap: 16px; align-items: flex-start; padding: 20px; background: white; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .contact-icon { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; background: linear-gradient(135deg,var(--navy),var(--teal)); display: flex; align-items: center; justify-content: center; }
+    .contact-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+    .contact-value { font-size: 15px; color: var(--text); font-weight: 500; margin-top: 2px; }
+    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-input, .form-textarea { border: 1.5px solid rgba(0,0,0,0.12); border-radius: 8px; padding: 12px 16px; font-size: 15px; width: 100%; font-family: 'Source Serif 4', serif; background: white; color: var(--text); transition: border-color 0.2s; outline: none; }
+    .form-input:focus, .form-textarea:focus { border-color: var(--teal); }
+    .form-textarea { resize: vertical; min-height: 130px; }
+    .btn-teal { background: linear-gradient(135deg,var(--teal),#0a4f4f); color: white; border: none; border-radius: 8px; padding: 14px 28px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Source Serif 4', serif; }
+    .btn-teal:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(13,110,110,0.3); }
+    .alert { padding: 12px 16px; border-radius: 8px; font-size: 14px; margin-top: 4px; }
+    .alert-success { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+    .alert-error { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; }
+
+    /* ── ADMIN ── */
+    .admin-wrap { padding: 80px 24px; max-width: 900px; margin: 0 auto; }
+    .admin-card { background: white; border-radius: 16px; padding: 40px; box-shadow: var(--shadow-lg); border-top: 4px solid var(--navy); }
+    .admin-login-center { max-width: 400px; margin: 0 auto; text-align: center; }
+    .admin-icon { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg,var(--navy),var(--teal)); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+    .admin-form { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+    .admin-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 32px; flex-wrap: wrap; gap: 12px; }
+    .admin-subtitle { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+    .new-post-box { background: var(--cream); border-radius: var(--radius); padding: 28px; margin-bottom: 32px; border: 1px dashed rgba(0,0,0,0.15); }
+    .new-post-box h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 16px; color: var(--navy); }
+    .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 600px) { .form-grid-2 { grid-template-columns: 1fr; } }
+    .form-label { font-size: 12px; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 5px; }
+    .btn-green { background: linear-gradient(135deg,var(--teal),#0a4f4f); color: white; border: none; border-radius: 8px; padding: 12px 24px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; font-family: 'Source Serif 4', serif; }
+    .btn-green:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(13,110,110,0.3); }
+    .btn-red { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; border-radius: 8px; padding: 8px 14px; font-size: 12px; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+    .btn-red:hover { background: #dc2626; color: white; }
+    .btn-logout { background: rgba(220,38,38,0.08); border: 1px solid rgba(220,38,38,0.25); color: #dc2626; border-radius: 8px; padding: 8px 16px; cursor: pointer; font-size: 13px; display: flex; align-items: center; gap: 6px; transition: all 0.2s; }
+    .btn-logout:hover { background: rgba(220,38,38,0.15); }
+    .post-item { background: var(--cream2); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; gap: 12px; border: 1px solid rgba(0,0,0,0.07); }
+    .post-item-title { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--navy); }
+    .post-item-date { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .posts-mgmt-title { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--navy); margin-bottom: 16px; }
+    .divider { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 28px 0; }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--navy); color: rgba(255,255,255,0.55); text-align: center; padding: 32px 24px; font-size: 13px; }
+    .footer strong { color: var(--gold); }
+
+    /* ── HOME PAGE SPECIAL ── */
+    #page-home { display: block; padding-top: 0; }
+    #page-home.hidden { display: none; }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav class="navbar">
+  <div class="nav-brand" onclick="showPage('home')">
+    <span class="nav-brand-name" id="nb-name">MD. MIJANUR RAHMAN</span>
+    <span class="nav-brand-sub" id="nb-sub">President · BNA Mymensingh</span>
+  </div>
+  <div class="nav-links" id="nav-links">
+    <button class="nav-link active" onclick="showPage('home')" id="nl-home">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      <span id="nt-home">Home</span>
+    </button>
+    <button class="nav-link" onclick="showPage('about')" id="nl-about">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg>
+      <span id="nt-about">About</span>
+    </button>
+    <button class="nav-link" onclick="showPage('posts')" id="nl-posts">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zM14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+      <span id="nt-posts">News & Posts</span>
+    </button>
+    <button class="nav-link" onclick="showPage('contact')" id="nl-contact">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <span id="nt-contact">Contact</span>
+    </button>
+    <button class="nav-link" onclick="showPage('admin')" id="nl-admin">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span id="nt-admin">Admin</span>
+    </button>
+  </div>
+  <div class="nav-actions">
+    <button class="lang-btn" onclick="toggleLang()">বাং</button>
+    <button class="hamburger" onclick="toggleMenu()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════
+     PAGE: HOME
+════════════════════════════════════════ -->
+<div id="page-home">
+  <div class="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-badge" id="h-badge">Bangladesh Nurses Association · Mymensingh</div>
+      <div class="hero-avatar">MR</div>
+      <h1 class="hero-name" id="h-name">MD. MIJANUR RAHMAN</h1>
+      <div class="hero-title" id="h-title">President</div>
+      <div class="hero-org" id="h-org">Bangladesh Nurses Association (BNA)</div>
+      <div class="hero-branch" id="h-branch">Mymensingh District Branch</div>
+      <div class="hero-divider"></div>
+      <p class="hero-tagline" id="h-tagline">Dedicated to the advancement of nursing profession & healthcare in Bangladesh</p>
+      <div class="hero-cta">
+        <button class="btn-gold" onclick="showPage('about')" id="h-btn1">Learn More</button>
+        <button class="btn-outline-white" onclick="showPage('contact')" id="h-btn2">Get in Touch</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     PAGE: ABOUT
+════════════════════════════════════════ -->
+<div id="page-about" class="page">
+  <div class="section">
+    <span class="tag" id="ab-tag">About</span>
+    <h2 class="section-heading" id="ab-heading">About</h2>
+    <div class="section-line"></div>
+    <div class="about-grid">
+      <div>
+        <p class="about-bio" id="ab-bio">MD. Mijanur Rahman is a distinguished nursing professional and community leader serving as the President of Bangladesh Nurses Association (BNA), Mymensingh District Branch. With decades of experience in healthcare and nursing administration, he has been a steadfast advocate for the rights, welfare, and professional development of nurses across Mymensingh district.
+
+His leadership has been instrumental in organizing training programs, community health initiatives, and policy advocacy efforts that have improved the lives of healthcare workers and patients alike. He remains committed to elevating the standards of nursing care throughout Bangladesh.</p>
+        <p class="about-role" id="ab-role">— President, BNA – Mymensingh District Branch</p>
+      </div>
+      <div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="s1-val">20+</div>
+            <div class="stat-label" id="s1-lbl">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="s2-val">500+</div>
+            <div class="stat-label" id="s2-lbl">Members Led</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="s3-val">50+</div>
+            <div class="stat-label" id="s3-lbl">Programs</div>
+          </div>
+        </div>
+        <div class="about-box">
+          <div class="about-box-title" id="ab-box-title">About BNA</div>
+          <p id="ab-box-body">The Bangladesh Nurses Association is the largest professional organization for nursing professionals in the country. The Mymensingh District Branch tirelessly works to serve, train, and protect the rights of local nurses.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     PAGE: POSTS
+════════════════════════════════════════ -->
+<div id="page-posts" class="page">
+  <div class="posts-bg">
+    <div class="posts-inner">
+      <span class="tag" id="po-tag">News</span>
+      <h2 class="section-heading" id="po-heading">News & Posts</h2>
+      <div class="section-line"></div>
+      <div class="posts-grid" id="posts-grid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     PAGE: CONTACT
+════════════════════════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="section">
+    <span class="tag" id="co-tag">Contact</span>
+    <h2 class="section-heading" id="co-heading">Contact</h2>
+    <div class="section-line"></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0zM12 13a3 3 0 100-6 3 3 0 000 6z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label" id="co-addr-lbl">Address</div>
+            <div class="contact-value" id="co-addr">Bangladesh Nurses Association, Mymensingh District Branch, Mymensingh, Bangladesh</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label" id="co-mob-lbl">Mobile</div>
+            <div class="contact-value">+880-1XXXXXXXXX</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6"/></svg>
+          </div>
+          <div>
+            <div class="contact-label" id="co-email-lbl">Email</div>
+            <div class="contact-value">bna.mymensingh@gmail.com</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <input class="form-input" id="cf-name" type="text" placeholder="Your Name" />
+        <input class="form-input" id="cf-email" type="email" placeholder="Your Email" />
+        <textarea class="form-textarea" id="cf-msg" placeholder="Your Message"></textarea>
+        <button class="btn-teal" onclick="sendContact()" id="co-send-btn">Send Message</button>
+        <div class="alert alert-success" id="contact-success" style="display:none" id="co-success-msg">Message sent successfully! We will contact you soon.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     PAGE: ADMIN
+════════════════════════════════════════ -->
+<div id="page-admin" class="page">
+  <div class="admin-wrap">
+
+    <!-- LOGIN -->
+    <div id="admin-login" class="admin-card">
+      <div class="admin-login-center">
+        <div class="admin-icon">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h2 class="section-heading" id="ad-login-title">Admin Login</h2>
+        <div class="admin-form">
+          <input class="form-input" id="admin-pw-input" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')doLogin()" />
+          <div class="alert alert-error" id="pw-error" style="display:none" id="ad-wrong">Incorrect password. Please try again.</div>
+          <button class="btn-teal" onclick="doLogin()" id="ad-enter-btn">Login</button>
+        </div>
+        <p style="margin-top:20px;font-size:12px;color:var(--text-muted)">Default password: <strong></strong></p>
+      </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="admin-dashboard" class="admin-card" style="display:none">
+      <div class="admin-header">
+        <div>
+          <h2 class="section-heading" id="ad-dash-title">Admin Dashboard</h2>
+          <div class="admin-subtitle" id="ad-dash-sub">Manage and publish posts</div>
+        </div>
+        <button class="btn-logout" onclick="doLogout()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+          <span id="ad-logout">Logout</span>
+        </button>
+      </div>
+
+      <div class="new-post-box">
+        <h3 id="ad-new-post">Create New Post</h3>
+        <div class="form-grid-2">
+          <div>
+            <label class="form-label">Title (English) *</label>
+            <input class="form-input" id="np-title-en" placeholder="Post title in English" />
+          </div>
+          <div>
+            <label class="form-label">শিরোনাম (বাংলা)</label>
+            <input class="form-input" id="np-title-bn" placeholder="পোস্টের শিরোনাম বাংলায়" />
+          </div>
+        </div>
+        <div style="margin-top:12px">
+          <label class="form-label">Content (English) *</label>
+          <textarea class="form-textarea" id="np-body-en" placeholder="Write post content in English..."></textarea>
+        </div>
+        <div style="margin-top:12px">
+          <label class="form-label">বিষয়বস্তু (বাংলা)</label>
+          <textarea class="form-textarea" id="np-body-bn" placeholder="বাংলায় পোস্টের বিষয়বস্তু লিখুন..."></textarea>
+        </div>
+        <div style="margin-top:16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+          <button class="btn-green" onclick="publishPost()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            <span id="ad-publish-btn">Publish Post</span>
+          </button>
+          <div class="alert alert-success" id="publish-success" style="display:none;margin:0" id="ad-published">Post published successfully!</div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+      <div class="posts-mgmt-title" id="ad-mgmt-title">Manage Posts</div>
+      <div id="admin-posts-list"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     POST MODAL
+════════════════════════════════════════ -->
+<div class="modal-overlay" id="post-modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-top">
+      <div class="modal-title" id="modal-title"></div>
+      <button class="modal-close" onclick="document.getElementById('post-modal').classList.remove('open')">Close ✕</button>
+    </div>
+    <div class="modal-date" id="modal-date"></div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer" id="site-footer">
+  <div style="margin-bottom:6px"><strong id="ft-name">MD. MIJANUR RAHMAN</strong></div>
+  <div id="ft-copy">© 2024 MD. Mijanur Rahman – President, Bangladesh Nurses Association, Mymensingh District Branch. All rights reserved.</div>
+</footer>
+
+<!-- ════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+<script>
+// ── LANGUAGE DATA ──────────────────────────────────────────
+const T = {
+  en: {
+    nb_name: "MD. MIJANUR RAHMAN", nb_sub: "President · BNA Mymensingh",
+    nt_home: "Home", nt_about: "About", nt_posts: "News & Posts", nt_contact: "Contact", nt_admin: "Admin",
+    h_badge: "Bangladesh Nurses Association · Mymensingh",
+    h_name: "MD. MIJANUR RAHMAN", h_title: "President",
+    h_org: "Bangladesh Nurses Association (BNA)", h_branch: "Mymensingh District Branch",
+    h_tagline: "Dedicated to the advancement of nursing profession & healthcare in Bangladesh",
+    h_btn1: "Learn More", h_btn2: "Get in Touch",
+    ab_tag: "About", ab_heading: "About",
+    ab_bio: `MD. Mijanur Rahman is a distinguished nursing professional and community leader serving as the President of Bangladesh Nurses Association (BNA), Mymensingh District Branch. With decades of experience in healthcare and nursing administration, he has been a steadfast advocate for the rights, welfare, and professional development of nurses across Mymensingh district.
+
+His leadership has been instrumental in organizing training programs, community health initiatives, and policy advocacy efforts that have improved the lives of healthcare workers and patients alike. He remains committed to elevating the standards of nursing care throughout Bangladesh.`,
+    ab_role: "— President, BNA – Mymensingh District Branch",
+    s1_val: "20+", s1_lbl: "Years Experience",
+    s2_val: "500+", s2_lbl: "Members Led",
+    s3_val: "50+", s3_lbl: "Programs",
+    ab_box_title: "About BNA",
+    ab_box_body: "The Bangladesh Nurses Association is the largest professional organization for nursing professionals in the country. The Mymensingh District Branch tirelessly works to serve, train, and protect the rights of local nurses.",
+    po_tag: "News", po_heading: "News & Posts",
+    po_empty: "No posts yet.", po_read: "Read More", po_posted: "Posted on", po_close: "Close",
+    co_tag: "Contact", co_heading: "Contact",
+    co_addr_lbl: "Address", co_mob_lbl: "Mobile", co_email_lbl: "Email",
+    co_addr: "Bangladesh Nurses Association, Mymensingh District Branch, Mymensingh, Bangladesh",
+    cf_name: "Your Name", cf_email: "Your Email", cf_msg: "Your Message",
+    co_send_btn: "Send Message",
+    co_success: "Message sent successfully! We will contact you soon.",
+    ad_login_title: "Admin Login", ad_pw: "Password", ad_enter_btn: "Login",
+    ad_wrong: "Incorrect password. Please try again.",
+    ad_dash_title: "Admin Dashboard", ad_dash_sub: "Manage and publish posts",
+    ad_logout: "Logout", ad_new_post: "Create New Post",
+    ad_publish_btn: "Publish Post", ad_published: "Post published successfully!",
+    ad_mgmt_title: "Manage Posts", ad_no_posts: "No posts published yet.",
+    ad_confirm_del: "Are you sure you want to delete this post?",
+    ad_delete: "Delete",
+    ft_name: "MD. MIJANUR RAHMAN",
+    ft_copy: "© 2024 MD. Mijanur Rahman – President, Bangladesh Nurses Association, Mymensingh District Branch. All rights reserved.",
+    lang_btn: "বাং",
+  },
+  bn: {
+    nb_name: "মোঃ মিজানুর রহমান", nb_sub: "সভাপতি · বিএনএ ময়মনসিংহ",
+    nt_home: "হোম", nt_about: "পরিচিতি", nt_posts: "সংবাদ ও পোস্ট", nt_contact: "যোগাযোগ", nt_admin: "অ্যাডমিন",
+    h_badge: "বাংলাদেশ নার্সেস অ্যাসোসিয়েশন · ময়মনসিংহ",
+    h_name: "মোঃ মিজানুর রহমান", h_title: "সভাপতি",
+    h_org: "বাংলাদেশ নার্সেস অ্যাসোসিয়েশন (বিএনএ)", h_branch: "ময়মনসিংহ জেলা শাখা",
+    h_tagline: "বাংলাদেশে নার্সিং পেশা ও স্বাস্থ্যসেবার উন্নয়নে নিবেদিত",
+    h_btn1: "পরিচিতি দেখুন", h_btn2: "যোগাযোগ করুন",
+    ab_tag: "পরিচিতি", ab_heading: "পরিচিতি",
+    ab_bio: `মোঃ মিজানুর রহমান বাংলাদেশ নার্সেস অ্যাসোসিয়েশন (বিএনএ), ময়মনসিংহ জেলা শাখার সভাপতি হিসেবে দায়িত্ব পালনকারী একজন বিশিষ্ট নার্সিং পেশাদার ও সমাজনেতা। স্বাস্থ্যসেবা ও নার্সিং প্রশাসনে কয়েক দশকের অভিজ্ঞতায় তিনি ময়মনসিংহ জেলার নার্সদের অধিকার, কল্যাণ ও পেশাগত উন্নয়নে অক্লান্ত পরিশ্রম করে আসছেন।
+
+তাঁর নেতৃত্বে প্রশিক্ষণ কার্যক্রম, সামাজিক স্বাস্থ্য উদ্যোগ এবং নীতি-সমর্থন কার্যক্রম পরিচালিত হয়েছে যা স্বাস্থ্যকর্মী ও রোগী উভয়ের জীবনমান উন্নত করেছে। তিনি সারা বাংলাদেশে নার্সিং সেবার মান উন্নয়নে দৃঢ়ভাবে প্রতিশ্রুতিবদ্ধ।`,
+    ab_role: "— সভাপতি, বিএনএ – ময়মনসিংহ জেলা শাখা",
+    s1_val: "২০+", s1_lbl: "বছরের অভিজ্ঞতা",
+    s2_val: "৫০০+", s2_lbl: "সদস্য নেতৃত্ব",
+    s3_val: "৫০+", s3_lbl: "কার্যক্রম",
+    ab_box_title: "সংগঠন পরিচিতি",
+    ab_box_body: "বাংলাদেশ নার্সেস অ্যাসোসিয়েশন দেশের নার্সিং পেশাদারদের সবচেয়ে বড় পেশাদার সংগঠন। ময়মনসিংহ জেলা শাখা স্থানীয় নার্সদের সেবা, প্রশিক্ষণ ও অধিকার রক্ষায় নিরলসভাবে কাজ করে যাচ্ছে।",
+    po_tag: "সংবাদ", po_heading: "সংবাদ ও পোস্ট",
+    po_empty: "এখনও কোনো পোস্ট নেই।", po_read: "আরও পড়ুন", po_posted: "প্রকাশিত", po_close: "বন্ধ করুন",
+    co_tag: "যোগাযোগ", co_heading: "যোগাযোগ",
+    co_addr_lbl: "ঠিকানা", co_mob_lbl: "মোবাইল", co_email_lbl: "ইমেইল",
+    co_addr: "বাংলাদেশ নার্সেস অ্যাসোসিয়েশন, ময়মনসিংহ জেলা শাখা, ময়মনসিংহ, বাংলাদেশ",
+    cf_name: "আপনার নাম", cf_email: "আপনার ইমেইল", cf_msg: "আপনার বার্তা",
+    co_send_btn: "বার্তা পাঠান",
+    co_success: "বার্তা সফলভাবে পাঠানো হয়েছে! আমরা শীঘ্রই যোগাযোগ করব।",
+    ad_login_title: "অ্যাডমিন লগইন", ad_pw: "পাসওয়ার্ড", ad_enter_btn: "প্রবেশ করুন",
+    ad_wrong: "ভুল পাসওয়ার্ড। আবার চেষ্টা করুন।",
+    ad_dash_title: "অ্যাডমিন ড্যাশবোর্ড", ad_dash_sub: "পোস্ট পরিচালনা ও প্রকাশনা",
+    ad_logout: "লগআউট", ad_new_post: "নতুন পোস্ট তৈরি করুন",
+    ad_publish_btn: "পোস্ট প্রকাশ করুন", ad_published: "পোস্ট সফলভাবে প্রকাশিত হয়েছে!",
+    ad_mgmt_title: "পোস্ট ব্যবস্থাপনা", ad_no_posts: "এখনও কোনো পোস্ট প্রকাশিত হয়নি।",
+    ad_confirm_del: "আপনি কি এই পোস্টটি মুছতে চান?",
+    ad_delete: "মুছুন",
+    ft_name: "মোঃ মিজানুর রহমান",
+    ft_copy: "© ২০২৪ মোঃ মিজানুর রহমান – সভাপতি, বাংলাদেশ নার্সেস অ্যাসোসিয়েশন, ময়মনসিংহ জেলা শাখা। সর্বস্বত্ব সংরক্ষিত।",
+    lang_btn: "EN",
+  }
+};
+
+// ── STATE ──────────────────────────────────────────────────
+const ADMIN_PASS = "BNA@2024";
+let lang = "en";
+let currentPage = "home";
+let adminLoggedIn = false;
+
+const SAMPLE_POSTS = [
+  {
+    id: 1,
+    titleEn: "Annual Nursing Conference 2024",
+    titleBn: "বার্ষিক নার্সিং সম্মেলন ২০২৪",
+    bodyEn: "The Bangladesh Nurses Association, Mymensingh District Branch, proudly announces its Annual Nursing Conference 2024. The event will focus on modern nursing practices, patient care improvements, and professional development opportunities for nurses across the district. All registered nurses are encouraged to attend and participate in the knowledge-sharing sessions.",
+    bodyBn: "বাংলাদেশ নার্সেস অ্যাসোসিয়েশন, ময়মনসিংহ জেলা শাখা গর্বের সাথে বার্ষিক নার্সিং সম্মেলন ২০২৪ ঘোষণা করছে। এই অনুষ্ঠানে আধুনিক নার্সিং অনুশীলন, রোগীর সেবার উন্নতি এবং জেলার নার্সদের পেশাদার উন্নয়নের সুযোগগুলি নিয়ে আলোচনা করা হবে। সকল নিবন্ধিত নার্সদের জ্ঞান-ভাগাভাগি সেশনে অংশ নিতে উৎসাহিত করা হচ্ছে।",
+    date: "2024-03-15"
+  },
+  {
+    id: 2,
+    titleEn: "Free Health Camp – Serving 300+ Patients",
+    titleBn: "বিনামূল্যে স্বাস্থ্য শিবির – ৩০০+ রোগীকে সেবা",
+    bodyEn: "BNA Mymensingh District Branch successfully organized a free health camp serving over 300 patients from underprivileged communities. The camp provided basic health checkups, blood pressure monitoring, diabetes screening, and essential medicines. This initiative reflects our commitment to accessible healthcare for all citizens of Mymensingh.",
+    bodyBn: "বিএনএ ময়মনসিংহ জেলা শাখা সুবিধাবঞ্চিত সম্প্রদায়ের ৩০০ জনেরও বেশি রোগীকে সেবা প্রদানকারী একটি বিনামূল্যে স্বাস্থ্য শিবির সফলভাবে আয়োজন করেছে। এই শিবিরে মৌলিক স্বাস্থ্য পরীক্ষা, রক্তচাপ পর্যবেক্ষণ, ডায়াবেটিস স্ক্রিনিং এবং প্রয়োজনীয় ওষুধ সরবরাহ করা হয়েছে।",
+    date: "2024-02-20"
+  }
+];
+
+let posts = (() => {
+  try { const s = localStorage.getItem("bna_posts"); return s ? JSON.parse(s) : SAMPLE_POSTS; }
+  catch { return SAMPLE_POSTS; }
+})();
+
+// ── HELPERS ────────────────────────────────────────────────
+function savePosts() {
+  try { localStorage.setItem("bna_posts", JSON.stringify(posts)); } catch {}
+}
+
+function $(id) { return document.getElementById(id); }
+
+function setText(id, text) {
+  const el = $(id);
+  if (el) el.textContent = text;
+}
+
+function setPlaceholder(id, text) {
+  const el = $(id);
+  if (el) el.placeholder = text;
+}
+
+// ── LANGUAGE ───────────────────────────────────────────────
+function toggleLang() {
+  lang = lang === "en" ? "bn" : "en";
+  applyLang();
+  renderPosts();
+  if (adminLoggedIn) renderAdminPosts();
+}
+
+function applyLang() {
+  const t = T[lang];
+  const isBn = lang === "bn";
+
+  // Body font
+  document.body.className = isBn ? "bn" : "";
+
+  // Lang button
+  document.querySelector(".lang-btn").textContent = t.lang_btn;
+
+  // Navbar
+  setText("nb-name", t.nb_name);
+  setText("nb-sub", t.nb_sub);
+  setText("nt-home", t.nt_home);
+  setText("nt-about", t.nt_about);
+  setText("nt-posts", t.nt_posts);
+  setText("nt-contact", t.nt_contact);
+  setText("nt-admin", t.nt_admin);
+
+  // Hero
+  setText("h-badge", t.h_badge);
+  setText("h-name", t.h_name);
+  setText("h-title", t.h_title);
+  setText("h-org", t.h_org);
+  setText("h-branch", t.h_branch);
+  setText("h-tagline", t.h_tagline);
+  setText("h-btn1", t.h_btn1);
+  setText("h-btn2", t.h_btn2);
+
+  // About
+  setText("ab-tag", t.ab_tag);
+  setText("ab-heading", t.ab_heading);
+  setText("ab-bio", t.ab_bio);
+  setText("ab-role", t.ab_role);
+  setText("s1-val", t.s1_val); setText("s1-lbl", t.s1_lbl);
+  setText("s2-val", t.s2_val); setText("s2-lbl", t.s2_lbl);
+  setText("s3-val", t.s3_val); setText("s3-lbl", t.s3_lbl);
+  setText("ab-box-title", t.ab_box_title);
+  setText("ab-box-body", t.ab_box_body);
+
+  // Posts
+  setText("po-tag", t.po_tag);
+  setText("po-heading", t.po_heading);
+
+  // Contact
+  setText("co-tag", t.co_tag);
+  setText("co-heading", t.co_heading);
+  setText("co-addr-lbl", t.co_addr_lbl);
+  setText("co-addr", t.co_addr);
+  setText("co-mob-lbl", t.co_mob_lbl);
+  setText("co-email-lbl", t.co_email_lbl);
+  setPlaceholder("cf-name", t.cf_name);
+  setPlaceholder("cf-email", t.cf_email);
+  setPlaceholder("cf-msg", t.cf_msg);
+  setText("co-send-btn", t.co_send_btn);
+
+  // Admin
+  setText("ad-login-title", t.ad_login_title);
+  setPlaceholder("admin-pw-input", t.ad_pw);
+  setText("ad-enter-btn", t.ad_enter_btn);
+  setText("ad-wrong", t.ad_wrong);
+  setText("ad-dash-title", t.ad_dash_title);
+  setText("ad-dash-sub", t.ad_dash_sub);
+  setText("ad-logout", t.ad_logout);
+  setText("ad-new-post", t.ad_new_post);
+  setText("ad-publish-btn", t.ad_publish_btn);
+  setText("ad-published", t.ad_published);
+  setText("ad-mgmt-title", t.ad_mgmt_title);
+
+  // Footer
+  setText("ft-name", t.ft_name);
+  setText("ft-copy", t.ft_copy);
+}
+
+// ── NAVIGATION ─────────────────────────────────────────────
+function showPage(page) {
+  // Hide all
+  $("page-home").classList.add("hidden");
+  ["about","posts","contact","admin"].forEach(p => {
+    $("page-" + p).classList.remove("active");
+  });
+
+  // Remove active from all nav links
+  document.querySelectorAll(".nav-link").forEach(el => el.classList.remove("active"));
+
+  currentPage = page;
+
+  if (page === "home") {
+    $("page-home").classList.remove("hidden");
+  } else {
+    $("page-" + page).classList.add("active");
+  }
+
+  $("nl-" + page).classList.add("active");
+
+  // Close menu on mobile
+  $("nav-links").classList.remove("open");
+
+  window.scrollTo(0, 0);
+
+  if (page === "posts") renderPosts();
+  if (page === "admin" && adminLoggedIn) renderAdminPosts();
+}
+
+function toggleMenu() {
+  $("nav-links").classList.toggle("open");
+}
+
+// ── POSTS RENDER ───────────────────────────────────────────
+function renderPosts() {
+  const grid = $("posts-grid");
+  const t = T[lang];
+  if (posts.length === 0) {
+    grid.innerHTML = `<div class="empty-state">${t.po_empty}</div>`;
+    return;
+  }
+  grid.innerHTML = posts.map(post => `
+    <div class="post-card" onclick="openPost(${post.id})">
+      <div class="post-card-accent"></div>
+      <div class="post-card-body">
+        <div class="post-date">📅 ${t.po_posted}: ${post.date}</div>
+        <div class="post-title">${lang === "bn" ? post.titleBn : post.titleEn}</div>
+        <div class="post-excerpt">${(lang === "bn" ? post.bodyBn : post.bodyEn).slice(0,160)}...</div>
+        <div class="post-readmore">${t.po_read} →</div>
+      </div>
+    </div>
+  `).join("");
+}
+
+function openPost(id) {
+  const post = posts.find(p => p.id === id);
+  if (!post) return;
+  const t = T[lang];
+  $("modal-title").textContent = lang === "bn" ? post.titleBn : post.titleEn;
+  $("modal-date").textContent = `📅 ${t.po_posted}: ${post.date}`;
+  $("modal-body").textContent = lang === "bn" ? post.bodyBn : post.bodyEn;
+  $("post-modal").classList.add("open");
+}
+
+function closeModal(e) {
+  if (e.target === $("post-modal")) $("post-modal").classList.remove("open");
+}
+
+// ── CONTACT ────────────────────────────────────────────────
+function sendContact() {
+  $("cf-name").value = "";
+  $("cf-email").value = "";
+  $("cf-msg").value = "";
+  const el = $("contact-success");
+  el.textContent = T[lang].co_success;
+  el.style.display = "block";
+  setTimeout(() => el.style.display = "none", 4000);
+}
+
+// ── ADMIN ──────────────────────────────────────────────────
+function doLogin() {
+  const pw = $("admin-pw-input").value;
+  if (pw === ADMIN_PASS) {
+    adminLoggedIn = true;
+    $("admin-login").style.display = "none";
+    $("admin-dashboard").style.display = "block";
+    $("admin-pw-input").value = "";
+    $("pw-error").style.display = "none";
+    renderAdminPosts();
+  } else {
+    $("pw-error").textContent = T[lang].ad_wrong;
+    $("pw-error").style.display = "block";
+  }
+}
+
+function doLogout() {
+  adminLoggedIn = false;
+  $("admin-login").style.display = "block";
+  $("admin-dashboard").style.display = "none";
+}
+
+function publishPost() {
+  const titleEn = $("np-title-en").value.trim();
+  const bodyEn = $("np-body-en").value.trim();
+  if (!titleEn || !bodyEn) return;
+
+  const newPost = {
+    id: Date.now(),
+    titleEn: titleEn,
+    titleBn: $("np-title-bn").value.trim() || titleEn,
+    bodyEn: bodyEn,
+    bodyBn: $("np-body-bn").value.trim() || bodyEn,
+    date: new Date().toISOString().split("T")[0]
+  };
+
+  posts.unshift(newPost);
+  savePosts();
+
+  $("np-title-en").value = "";
+  $("np-title-bn").value = "";
+  $("np-body-en").value = "";
+  $("np-body-bn").value = "";
+
+  const msg = $("publish-success");
+  msg.textContent = T[lang].ad_published;
+  msg.style.display = "block";
+  setTimeout(() => msg.style.display = "none", 3000);
+
+  renderAdminPosts();
+}
+
+function deletePost(id) {
+  if (!confirm(T[lang].ad_confirm_del)) return;
+  posts = posts.filter(p => p.id !== id);
+  savePosts();
+  renderAdminPosts();
+}
+
+function renderAdminPosts() {
+  const t = T[lang];
+  const list = $("admin-posts-list");
+  $("ad-mgmt-title").textContent = t.ad_mgmt_title + " (" + posts.length + ")";
+  if (posts.length === 0) {
+    list.innerHTML = `<div class="empty-state" style="padding:32px">${t.ad_no_posts}</div>`;
+    return;
+  }
+  list.innerHTML = posts.map(post => `
+    <div class="post-item">
+      <div>
+        <div class="post-item-title">${post.titleEn}</div>
+        ${post.titleBn !== post.titleEn ? `<div style="font-size:13px;color:var(--teal);margin-top:2px">${post.titleBn}</div>` : ""}
+        <div class="post-item-date">${post.date}</div>
+      </div>
+      <button class="btn-red" onclick="deletePost(${post.id})">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/></svg>
+        ${t.ad_delete}
+      </button>
+    </div>
+  `).join("");
+}
+
+// ── INIT ───────────────────────────────────────────────────
+applyLang();
+showPage("home");
+</script>
+</body>
+</html>
